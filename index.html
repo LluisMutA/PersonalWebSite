@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Mi Web Personal</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
 </head>
 <body>
+    <!-- Botón de menú -->
+    <button id="menuButton" onclick="toggleNav()">☰</button>
+
+    <!-- Barra de navegación oculta al inicio -->
+    <nav id="navbar" class="hidden">
+        <ul>
+            <li><a href="#about">Sobre Mí</a></li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
     <!-- Header -->
     <header>
-        <h1>Lluís Mut Arbona</h1>
+        <h1>Mi Nombre</h1>
         <p>Desarrollador Web / Buscando oportunidades</p>
     </header>
 
@@ -33,13 +44,6 @@
             <button type="submit">Enviar</button>
             <p id="formMessage"></p>
         </form>
-    </section>
-
-    <!-- Enlaces a redes profesionales -->
-    <section id="social">
-        <h2>Conéctate conmigo</h2>
-        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
     </section>
 
     <!-- Portafolio -->
