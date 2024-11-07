@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Funnel Display", sans-serif;
+  background-color: #1E1E1E;
+  color: white;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe toda la ventana */
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #2D2D2D;
+}
+
+header h1 {
+  color: #F1C40F;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #F1C40F;
+  text-decoration: none;
+}
+
+section {
+  width: 60%; 
+  margin: 0 auto; 
+  padding: 40px;
+  text-align: center;
+  flex: 1;
+}
+
+h2 {
+  color: #3498DB;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden;
+}
+
+.carousel-items {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  padding: 20px;
+  background-color: #2D2D2D;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item:hover {
+  background-color: #F1C40F;
+}
+
+.carousel div {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #2D2D2D;
+  color: white;
+}
+
+button {
+  padding: 10px;
+  background-color: #3498DB;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980B9;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around; /* Alinea los iconos distribuidos de manera uniforme */
+  flex-wrap: wrap; /* Permite que los iconos se ajusten si el ancho no es suficiente */
+  gap: 10px; /* Espacio entre los iconos */
+  margin-top: 20px; /* Espacio superior para separar los iconos del encabezado */
+}
+
+.social-links a {
+  flex: 1 1 16%; /* Hace que cada icono ocupe el 16% del ancho de la sección */
+  text-align: center; /* Centra el contenido de los enlaces */
+}
+
+.social-links img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho de su contenedor */
+  max-width: 50px; /* Limita el tamaño máximo de las imágenes */
+  height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+footer {
+  width: 100%; 
+  position: relative; 
+  text-align: center;
+  padding: 20px;
+  background-color: #2D2D2D;
+  color: #F1C40F;
+  margin-top: auto; 
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3498DB;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+button:hover {
+  background-color: #2980B9;
+}
+
+#portfolio {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#portfolio .static-item {
+  padding: 20px;
+  background-color: #2D2D2D;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#portfolio .static-item:hover {
+  background-color: #F1C40F;
+}
+
+#portfolio .static-item {
+  display: inline-block;
+  width: 48%;
+  margin-right: 2%;
+}
+
+#portfolio .static-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+section {
+  transition: opacity 0.5s ease;
+}

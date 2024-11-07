@@ -1,64 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Web Personal</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Web Personal</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+
 </head>
 <body>
-    <!-- Botón de menú -->
-    <button id="menuButton" onclick="toggleNav()">☰</button>
-
-    <!-- Barra de navegación oculta al inicio -->
-    <nav id="navbar" class="hidden">
-        <ul>
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#portfolio">Portafolio</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
+  <header>
+    <h1>Lluís Bernat Mut</h1>
+    <p>Desarrollador Web | Diseñador UX/UI</p>
+    <nav>
+      <ul>
+        <li><a href="#about">Quien soy?</a></li>
+        <li><a href="#portfolio" data-section="portfolio">Algunos trabajos:</a></li>
+        <li><a href="#contact" data-section="contact">Contacta conmigo:</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <h1>Mi Nombre</h1>
-        <p>Desarrollador Web / Buscando oportunidades</p>
-    </header>
+  <section id="about">
+    <h2>Acerca de mí:</h2>
+    <p>Hola, me llamo Lluís, nací en 1994 y llevo poco tiempo explorando el fascinante mundo de la programación. Mis objetivos a largo plazo incluyen desarrollar las habilidades necesarias para dedicarme profesionalmente a este campo. Actualmente trabajo en el área de radiodiagnóstico, donde realizo imágenes médicas, aunque me gustaría cambiar de rumbo. Además, tengo formación en psicología y pedagogía, lo que me aporta una visión única y humana en cada proyecto.
+    </p>
+ <br><br>
+    <h2>Currículum</h2>
+   
+    <div class="carousel">
+        <button class="prev">←</button>
 
-    <!-- Sección de Presentación -->
-    <section id="about">
-        <h2>Sobre Mí</h2>
-        <p>Soy un desarrollador apasionado por el código y la tecnología. Me gusta trabajar en proyectos innovadores y estoy buscando nuevas oportunidades.</p>
-    </section>
+      <div class="carousel-items">
+        <div class="carousel-item">Formación</div>
+        <div class="carousel-item">Experiencia</div>
+        <div class="carousel-item">Habilidades</div>
+        <div class="carousel-item">Certificaciones</div>
+        <div class="carousel-item">Proyectos</div>
+        <div class="carousel-item">Otros</div>
+      </div>
+      <button class="next">→</button>
 
-    <!-- Información de Contacto -->
-    <section id="contact">
-        <h2>Contacto</h2>
-        <form id="contactForm">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Enviar</button>
-            <p id="formMessage"></p>
-        </form>
-    </section>
+    </div>
+    
+  </section>
+  
+  <section id="portfolio" class="static-content" style="display: none;">
+    <h2>Portafolio</h2>
+    <div class="static-item">Guess Game</div>
+    <div class="static-item">Image Searcher</div>
+    <div class="static-item">Web Blog</div>
+    <div class="static-item">Proyecto 4</div>
+  </section>
+  
+  <section id="contact" style="display: none;">
+    <h2>Contacto</h2>
+    <div class="social-links">
+      <a href="https://github.com/LluisMutA" target="_blank">
+        <img src="./images/github.png" alt="GitHub">
+      </a>
+      <a href="https://x.com/" target="_blank">
+        <img src="/images/x.png" alt="Twitter">
+      </a>
+      <a href="https://linkedin.com/" target="_blank">
+        <img src="/images/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:lluismut@gmail.com" target="_blank">
+        <img src="/images/gm.png" alt="Gmail">
+      </a>
+      <a href="https://wa.me/664433160" target="_blank">
+        <img src="/images/whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
+  </section>
+  
 
-    <!-- Portafolio -->
-    <section id="portfolio">
-        <h2>Portafolio</h2>
-        <div class="project">
-            <h3>Proyecto 1</h3>
-            <p>Descripción del proyecto 1.</p>
-        </div>
-        <div class="project">
-            <h3>Proyecto 2</h3>
-            <p>Descripción del proyecto 2.</p>
-        </div>
-    </section>
+  <footer>
+    <p>&copy; 2024 Lluís Mut</p>
+  </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
