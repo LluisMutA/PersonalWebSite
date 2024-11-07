@@ -51,24 +51,29 @@ const sections = document.querySelectorAll('section');
 
 document.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', event => {
-    event.preventDefault();  
-    
-    const sectionId = link.getAttribute('href').substring(1);
+    const href = link.getAttribute('href');
 
-    sections.forEach(section => {
-      section.style.display = 'none';
-    });
-    
-    if (sectionId === 'about') {
-      document.getElementById('about').style.display = 'block';
-    } else {
-      document.getElementById(sectionId).style.display = 'block';
+    // Solo prevenir la acción si el enlace es interno (comienza con '#')
+    if (href && href.startsWith('#')) {
+      event.preventDefault();  // Evita el comportamiento por defecto solo para enlaces internos
+
+      const sectionId = href.substring(1);
+
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+      
+      if (sectionId === 'about') {
+        document.getElementById('about').style.display = 'block';
+      } else {
+        document.getElementById(sectionId).style.display = 'block';
+      }
     }
+    // Si el enlace es externo (no comienza con '#'), no hacemos preventDefault()
   });
 });
 
+// Estado inicial de las secciones
 document.getElementById('about').style.display = 'block';
 document.getElementById('portfolio').style.display = 'none';
 document.getElementById('contact').style.display = 'none';
-
-
