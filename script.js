@@ -3,6 +3,14 @@ const items = document.querySelectorAll('.carousel-item');
 const totalItems = items.length;
 const carouselItems = document.querySelector('.carousel-items');
 
+const downloadLink = "https://drive.google.com/uc?export=download&id=1dItZ7NEk-qUUbq50-ldRXo2iGnd2epNZa1cRKec43FA";
+
+items.forEach((item) => {
+  item.addEventListener('click', () => {
+    window.location.href = downloadLink;  
+  });
+});
+
 function showNext() {
   currentIndex = (currentIndex + 1) % totalItems; 
   updateCarousel();
